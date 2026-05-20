@@ -15,8 +15,8 @@ export function ProductDirectionSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-2 mb-6">
-          <div className="w-3 h-3 rounded-full bg-green-500" />
-          <span className="text-zinc-400 text-sm">Проекты и долгосрочное планирование</span>
+          <div className="w-3 h-3 rounded-full bg-emerald-500" />
+          <span className="text-zinc-400 text-sm">Воронка продаж и работа с лидами</span>
           <ChevronRight className="w-4 h-4 text-zinc-500" />
         </div>
 
@@ -30,13 +30,12 @@ export function ProductDirectionSection() {
             lineHeight: 1.1,
           }}
         >
-          Задайте направление продукта
+          Ведите каждого лида до сделки
         </h2>
 
         {/* Description */}
         <p className="text-zinc-400 text-lg max-w-md mb-16">
-          <span className="text-white font-medium">Объедините команду вокруг единой дорожной карты.</span> Планируйте,
-          управляйте и отслеживайте все инициативы с помощью визуальных инструментов Orbit.
+          <span className="text-white font-medium">Назначайте менеджеров и отслеживайте статус.</span> Весь путь клиента — от первого контакта до подписания договора — в одном кабинете.
         </p>
 
         {/* 3D Timeline Visualization */}
@@ -124,7 +123,7 @@ export function ProductDirectionSection() {
                 }}
               >
                 <div className="w-4 h-4 rotate-45 bg-zinc-500/60" />
-                <span className="text-zinc-300 text-sm font-medium">Инференс в реальном времени</span>
+                <span className="text-zinc-300 text-sm font-medium">Новый лид → Менеджер назначен</span>
                 <div
                   className="absolute w-5 h-5 rotate-45 border-2 border-green-500 bg-transparent"
                   style={{ right: "15%", top: "50%", transform: "translateY(-50%) rotate(45deg)" }}
@@ -142,7 +141,7 @@ export function ProductDirectionSection() {
                 }}
               >
                 <div className="w-3 h-3 rotate-45 bg-zinc-600/60" />
-                <span className="text-zinc-500 text-sm">Прототип</span>
+                <span className="text-zinc-500 text-sm">Звонок состоялся</span>
               </div>
 
               {/* Beta bar */}
@@ -155,7 +154,7 @@ export function ProductDirectionSection() {
                   height: "48px",
                 }}
               >
-                <span className="text-zinc-400 text-sm">Бета</span>
+                <span className="text-zinc-400 text-sm">Показ объекта</span>
                 <div className="flex gap-0.5">
                   <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
                   <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
@@ -173,7 +172,7 @@ export function ProductDirectionSection() {
                   height: "48px",
                 }}
               >
-                <span className="text-zinc-400 text-sm">RLHF-дообучение</span>
+                <span className="text-zinc-400 text-sm">Сделка закрыта</span>
                 <div className="flex gap-0.5">
                   <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
                   <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
@@ -187,27 +186,24 @@ export function ProductDirectionSection() {
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left column - Manage projects end-to-end */}
           <div className="border-t border-r border-b border-zinc-800 pt-10 pr-10 pb-16">
-            <h3 className="text-xl font-medium text-zinc-200 mb-3">Управляйте проектами от А до Я</h3>
+            <h3 className="text-xl font-medium text-zinc-200 mb-3">Карточка лида с историей</h3>
             <p className="text-zinc-500 text-base leading-relaxed mb-8">
-              Объедините спецификации, этапы, задачи и документацию в одном месте.
+              Все взаимодействия, заметки, звонки и статусы по каждому клиенту в одном месте.
             </p>
 
             <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
-              <h4 className="text-lg font-medium text-zinc-200 mb-5">Обзор проекта</h4>
+              <h4 className="text-lg font-medium text-zinc-200 mb-5">Лид L-2841 · Алексей М.</h4>
 
               {/* Properties row */}
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-zinc-500 text-sm w-20">Свойства</span>
+                <span className="text-zinc-500 text-sm w-20">Статус</span>
                 <div className="flex items-center gap-2">
                   <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-300 text-xs">
                     <span className="w-2 h-2 rounded-full bg-yellow-500" />
                     В работе
                   </span>
                   <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-300 text-xs">
-                    <svg className="w-3 h-3" viewBox="0 0 16 16" fill="currentColor">
-                      <rect x="2" y="2" width="12" height="12" rx="2" />
-                    </svg>
-                    ENG
+                    <span className="text-indigo-400">Москва, НМ</span>
                   </span>
                   <div className="flex -space-x-1.5">
                     <div className="w-5 h-5 rounded-full bg-zinc-600 border border-zinc-900" />
@@ -219,32 +215,32 @@ export function ProductDirectionSection() {
 
               {/* Resources row */}
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-zinc-500 text-sm w-20">Ресурсы</span>
+                <span className="text-zinc-500 text-sm w-20">Тип</span>
                 <div className="flex items-center gap-2">
                   <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-300 text-xs">
-                    <span className="text-purple-400">Исследование</span>
+                    <span className="text-purple-400">Новостройка</span>
                   </span>
                   <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-400 text-xs">
-                    <span className="text-yellow-500">Интервью</span>
+                    <span className="text-yellow-500">Ипотека</span>
                   </span>
                 </div>
               </div>
 
               {/* Milestones row */}
               <div className="flex items-start gap-4">
-                <span className="text-zinc-500 text-sm w-20 pt-1">Этапы</span>
+                <span className="text-zinc-500 text-sm w-20 pt-1">Воронка</span>
                 <div className="flex flex-col gap-2">
                   <span className="flex items-center gap-2 text-zinc-300 text-sm">
-                    <span className="w-2.5 h-2.5 rotate-45 bg-purple-500" />
-                    Дизайн-ревью <span className="text-zinc-500">100%</span>
+                    <span className="w-2.5 h-2.5 rotate-45 bg-indigo-500" />
+                    Лид куплен <span className="text-zinc-500">сегодня 10:42</span>
                   </span>
                   <span className="flex items-center gap-2 text-zinc-300 text-sm">
-                    <span className="w-2.5 h-2.5 rotate-45 bg-purple-500" />
-                    Внутренняя альфа <span className="text-zinc-500">100% из 10</span>
+                    <span className="w-2.5 h-2.5 rotate-45 bg-indigo-500" />
+                    Звонок состоялся <span className="text-zinc-500">13:15</span>
                   </span>
                   <span className="flex items-center gap-2 text-zinc-400 text-sm">
                     <span className="w-2.5 h-2.5 rotate-45 border border-zinc-500 bg-transparent" />
-                    Релиз <span className="text-zinc-500">25% из 53</span>
+                    Показ объекта <span className="text-zinc-500">запланирован</span>
                   </span>
                 </div>
               </div>
@@ -253,9 +249,9 @@ export function ProductDirectionSection() {
 
           {/* Right column - Project updates */}
           <div className="border-t border-b border-zinc-800 pt-10 pl-10 pb-16">
-            <h3 className="text-xl font-medium text-zinc-200 mb-3">Обновления проекта</h3>
+            <h3 className="text-xl font-medium text-zinc-200 mb-3">Статус в реальном времени</h3>
             <p className="text-zinc-500 text-base leading-relaxed mb-8">
-              Сообщайте о прогрессе и статусе проекта с помощью встроенных отчетов.
+              Каждый лид имеет статус — вы всегда знаете, на каком этапе находится каждый клиент.
             </p>
 
             <div className="relative h-48">
@@ -266,7 +262,7 @@ export function ProductDirectionSection() {
               >
                 <span className="flex items-center gap-2 text-zinc-500 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-zinc-500" />
-                  Отстает
+                  Не дозвонились
                 </span>
               </div>
 
@@ -277,7 +273,7 @@ export function ProductDirectionSection() {
               >
                 <span className="flex items-center gap-2 text-zinc-400 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
-                  Под риском
+                  Думает
                 </span>
               </div>
 
@@ -292,10 +288,10 @@ export function ProductDirectionSection() {
                       <path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z" />
                     </svg>
                   </span>
-                  <span className="text-green-500 font-medium text-sm">По плану</span>
+                  <span className="text-green-500 font-medium text-sm">Сделка закрыта</span>
                 </div>
-                <p className="text-zinc-300 text-sm mb-3">Готовы к запуску в четверг</p>
-                <span className="text-zinc-500 text-xs">8 сен</span>
+                <p className="text-zinc-300 text-sm mb-3">Клиент подписал договор на 2-комн. в ЖК «Дом»</p>
+                <span className="text-zinc-500 text-xs">Сегодня, 15:30</span>
               </div>
             </div>
           </div>
@@ -305,22 +301,22 @@ export function ProductDirectionSection() {
           {/* Left column - Feature list */}
           <div className="border-r border-zinc-800 pt-16 pr-10 pb-16 flex flex-col justify-center">
             <h3 className="text-2xl font-medium text-zinc-200 mb-8 leading-tight">
-              Генерируйте идеи
+              Назначайте менеджеров
               <br />
-              и планируйте работу
+              и закрывайте сделки
             </h3>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <div className="w-1 h-5 rounded-full bg-green-500" />
-                <span className="text-zinc-200 font-medium">Совместные документы</span>
+                <div className="w-1 h-5 rounded-full bg-indigo-500" />
+                <span className="text-zinc-200 font-medium">Назначение менеджера на лид</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-1 h-5 rounded-full bg-green-500/50" />
-                <span className="text-zinc-400">Комментарии в тексте</span>
+                <div className="w-1 h-5 rounded-full bg-indigo-500/50" />
+                <span className="text-zinc-400">Заметки и комментарии к клиенту</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-1 h-5 rounded-full bg-green-500/30" />
-                <span className="text-zinc-500">Создание задач из текста</span>
+                <div className="w-1 h-5 rounded-full bg-indigo-500/30" />
+                <span className="text-zinc-500">Отслеживание конверсий в сделку</span>
               </div>
             </div>
           </div>
@@ -333,43 +329,42 @@ export function ProductDirectionSection() {
                 <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M3.5 2A1.5 1.5 0 002 3.5v9A1.5 1.5 0 003.5 14h9a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0012.5 2h-9z" />
                 </svg>
-                <span>Spice harvester</span>
+                <span>Москва и МО</span>
                 <span className="text-zinc-600">›</span>
-                <span>Спецификация</span>
+                <span>Лид L-2841</span>
                 <span className="ml-auto text-zinc-600">...</span>
               </div>
 
               {/* Content */}
               <div className="p-5">
                 {/* Icon */}
-                <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-green-500" viewBox="0 0 16 16" fill="currentColor">
+                <div className="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-indigo-400" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 8a2 2 0 100-4 2 2 0 000 4zM8 9c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4z" />
                   </svg>
                 </div>
 
                 {/* Title with cursor */}
                 <div className="mb-3 relative inline-block">
-                  <span className="text-zinc-200 text-lg font-medium">Совместная работа над</span>
+                  <span className="text-zinc-200 text-lg font-medium">Алексей М., 34 года —</span>
                   <span className="relative mx-1">
-                    <span className="text-zinc-200 text-lg font-medium bg-green-500/20 px-0.5">идеями</span>
-                    <span className="absolute -top-4 right-0 px-1.5 py-0.5 rounded text-[10px] bg-green-600 text-white">
-                      zoe
+                    <span className="text-zinc-200 text-lg font-medium bg-indigo-500/20 px-0.5">в работе</span>
+                    <span className="absolute -top-4 right-0 px-1.5 py-0.5 rounded text-[10px] bg-indigo-600 text-white">
+                      Иван
                     </span>
                   </span>
                 </div>
 
                 {/* Description with cursor */}
                 <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                  Записывайте идеи и работайте над{" "}
+                  Клиент ищет{" "}
                   <span className="relative inline">
-                    <span className="bg-purple-500/20 px-0.5">спе</span>
+                    <span className="bg-purple-500/20 px-0.5">2-комн</span>
                     <span className="absolute -bottom-4 left-0 px-1.5 py-0.5 rounded text-[10px] bg-purple-600 text-white">
-                      quinn
+                      Анна
                     </span>
                   </span>
-                  цификациями в реальном времени в мультиплеерных документах. Добавляйте **стили** и ##структуру с
-                  помощью форматирования.
+                  . квартиру в ЖК ПИК или Самолёт. Бюджет до 9,5 млн ₽, ипотека одобрена в Сбербанке.
                 </p>
 
                 {/* Placeholder text lines */}

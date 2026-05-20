@@ -1,25 +1,22 @@
 import type React from "react"
 import { motion } from "framer-motion"
 import {
-  Inbox,
-  CircleUser,
-  Layers,
-  FolderKanban,
-  LayoutGrid,
-  Users,
-  Smartphone,
-  Map,
-  FileText,
   ChevronDown,
   ChevronRight,
-  CirclePower,
   Search,
   Plus,
-  Link2,
   MoreHorizontal,
-  Sparkles,
   Settings,
   HelpCircle,
+  Building2,
+  Users,
+  Wallet,
+  LayoutGrid,
+  Bell,
+  Phone,
+  MapPin,
+  Star,
+  Filter,
 } from "lucide-react"
 
 export function DashboardMockup() {
@@ -65,8 +62,8 @@ export function DashboardMockup() {
         {/* Logo */}
         <div className="p-3 border-b border-zinc-800/50">
           <div className="flex items-center gap-2 px-2 py-1.5">
-            <CirclePower className="w-5 h-5 text-white" />
-            <span className="text-white font-semibold text-sm">Orbit</span>
+            <Building2 className="w-5 h-5 text-indigo-400" />
+            <span className="text-white font-semibold text-sm">LeadEstate</span>
             <ChevronDown className="w-3.5 h-3.5 text-zinc-500 ml-auto" />
           </div>
         </div>
@@ -75,67 +72,61 @@ export function DashboardMockup() {
         <div className="p-3">
           <div className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-800/50 rounded-md text-zinc-500 text-xs">
             <Search className="w-3.5 h-3.5" />
-            <span>Поиск...</span>
+            <span>Поиск лидов...</span>
             <span className="ml-auto text-[10px] bg-zinc-700/50 px-1.5 py-0.5 rounded">⌘K</span>
           </div>
         </div>
 
         {/* Main nav */}
         <div className="px-3 space-y-0.5">
-          <NavItem icon={Inbox} label="Входящие" badge={3} active />
-          <NavItem icon={CircleUser} label="Мои задачи" />
+          <NavItem icon={LayoutGrid} label="Маркет лидов" badge={47} active />
+          <NavItem icon={Star} label="Мои лиды" />
+          <NavItem icon={Bell} label="Уведомления" badge={3} />
         </div>
 
         {/* Workspace section */}
         <div className="mt-5 px-3">
-          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Пространство
+          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider">
+            Продукты
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Layers} label="Инициативы" hasSubmenu />
-            <NavItem icon={FolderKanban} label="Проекты" hasSubmenu />
-            <NavItem icon={LayoutGrid} label="Представления" hasSubmenu />
-            <NavItem icon={Users} label="Команды" hasSubmenu />
+            <NavItem icon={Users} label="Готовые лиды" hasSubmenu />
+            <NavItem icon={MapPin} label="Перехват" hasSubmenu />
+            <NavItem icon={Phone} label="Звонки" hasSubmenu />
           </div>
         </div>
 
         {/* Favorites section */}
         <div className="mt-5 px-3">
-          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Избранное
+          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider">
+            Регионы
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Smartphone} label="Мобильное приложение" color="text-blue-400" />
-            <NavItem icon={Map} label="Роадмап Q1" color="text-orange-400" />
-            <NavItem icon={FileText} label="API Документация" color="text-emerald-400" />
-          </div>
-        </div>
-
-        {/* Teams section */}
-        <div className="mt-5 px-3 flex-1">
-          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Ваши команды
-          </div>
-          <div className="space-y-0.5 mt-1">
-            <NavItem icon={Sparkles} label="Продукт" hasSubmenu />
-            <NavItem icon={Settings} label="Разработка" hasSubmenu />
+            <NavItem icon={MapPin} label="Москва" color="text-blue-400" />
+            <NavItem icon={MapPin} label="Санкт-Петербург" color="text-orange-400" />
+            <NavItem icon={MapPin} label="Краснодар" color="text-emerald-400" />
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="p-3 border-t border-zinc-800/50">
+        <div className="mt-auto px-3 space-y-0.5">
+          <NavItem icon={Wallet} label="Баланс: 24 800 ₽" color="text-emerald-400" />
+          <NavItem icon={Settings} label="Настройки" />
           <NavItem icon={HelpCircle} label="Помощь" />
         </div>
       </motion.div>
 
-      {/* Inbox List */}
+      {/* Lead List */}
       <motion.div
-        className="w-[320px] h-full bg-zinc-900/40 border-r border-zinc-800/50 flex flex-col shrink-0"
+        className="w-[300px] h-full bg-zinc-900/40 border-r border-zinc-800/50 flex flex-col shrink-0"
         variants={panelVariants}
       >
         <div className="px-4 py-3 border-b border-zinc-800/50 flex items-center justify-between">
-          <h3 className="text-white font-semibold text-sm">Входящие</h3>
+          <h3 className="text-white font-semibold text-sm">Маркет лидов</h3>
           <div className="flex items-center gap-2">
+            <button className="text-zinc-500 hover:text-white transition-colors">
+              <Filter className="w-3.5 h-3.5" />
+            </button>
             <button className="text-zinc-500 hover:text-white transition-colors">
               <Plus className="w-4 h-4" />
             </button>
@@ -143,69 +134,63 @@ export function DashboardMockup() {
         </div>
 
         <div className="flex-1 overflow-auto scrollbar-hide">
-          <InboxItem
-            id="ENG-135"
-            title="Рефакторинг краулера"
-            subtitle="nan назначил вам"
-            time="2ч"
-            avatar="https://i.pravatar.cc/32?img=1"
-            status="in-progress"
+          <LeadItem
+            id="L-2841"
+            name="Алексей М."
+            region="Москва, Новая Москва"
+            budget="8 500 000 ₽"
+            type="Новостройка"
+            rooms="2-комн."
+            price="2 900 ₽"
+            isNew
             active
           />
-          <InboxItem
-            id="LLM"
-            title="LLM Чат-бот"
-            subtitle="Обновление проекта от raissa"
-            time="1д"
-            avatar="https://i.pravatar.cc/32?img=2"
-            status="todo"
-            isProject
+          <LeadItem
+            id="L-2840"
+            name="Марина К."
+            region="Москва, ЗАО"
+            budget="15 000 000 ₽"
+            type="Новостройка"
+            rooms="3-комн."
+            price="4 100 ₽"
+            isExclusive
           />
-          <InboxItem
-            id="ENG-159"
-            title="Ошибка загрузки изображений"
-            subtitle="SLA нарушен"
-            time="2д"
-            avatar="https://i.pravatar.cc/32?img=3"
-            status="bug"
+          <LeadItem
+            id="L-2839"
+            name="Дмитрий С."
+            region="Подмосковье"
+            budget="6 200 000 ₽"
+            type="Вторичка"
+            rooms="1-комн."
+            price="1 800 ₽"
           />
-          <InboxItem
-            id="DES-498"
-            title="Редизайн настроек..."
-            subtitle="karri упомянул вас"
-            time="4ч"
-            avatar="https://i.pravatar.cc/32?img=4"
-            status="todo"
+          <LeadItem
+            id="L-2838"
+            name="Ольга Н."
+            region="Москва, ЦАО"
+            budget="22 000 000 ₽"
+            type="Новостройка"
+            rooms="4-комн."
+            price="6 500 ₽"
+            isExclusive
           />
-          <InboxItem
-            id="ENG-160"
-            title="Движок Holtzmann сломан"
-            subtitle="Вы просили напомнить"
-            time="1н"
-            avatar="https://i.pravatar.cc/32?img=5"
-            status="bug"
+          <LeadItem
+            id="L-2837"
+            name="Виктор П."
+            region="Москва, СВАО"
+            budget="9 800 000 ₽"
+            type="Ипотека"
+            rooms="2-комн."
+            price="2 400 ₽"
           />
-          <InboxItem
-            title="Эксперименты с регистрацией"
-            subtitle="Добавлен в проект"
-            avatar="https://i.pravatar.cc/32?img=6"
-            status="done"
-            isProject
-          />
-          <InboxItem
-            id="MKT-122"
-            title="Ассеты для маркетинга"
-            subtitle="erin отметил как Дубликат"
-            time="1н"
-            avatar="https://i.pravatar.cc/32?img=7"
-            status="done"
-          />
-          <InboxItem
-            title="Главная страница v3"
-            subtitle="Обновление проекта от paco"
-            avatar="https://i.pravatar.cc/32?img=8"
-            status="todo"
-            isProject
+          <LeadItem
+            id="L-2836"
+            name="Татьяна Р."
+            region="Санкт-Петербург"
+            budget="11 500 000 ₽"
+            type="Новостройка"
+            rooms="3-комн."
+            price="3 200 ₽"
           />
         </div>
       </motion.div>
@@ -215,102 +200,82 @@ export function DashboardMockup() {
         {/* Header breadcrumb */}
         <div className="px-5 py-3 border-b border-zinc-800/50 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-1.5 text-xs">
-            <span className="text-zinc-500">Разработка</span>
+            <span className="text-zinc-500">Маркет лидов</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-emerald-400">Spice harvester</span>
+            <span className="text-indigo-400">Москва, Новая Москва</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-zinc-300">ENG-135</span>
+            <span className="text-zinc-300">L-2841</span>
           </div>
           <MoreHorizontal className="w-4 h-4 text-zinc-500" />
         </div>
 
         {/* Content */}
         <div className="flex-1 p-5 overflow-auto scrollbar-hide">
-          <h2 className="text-white text-xl font-semibold mb-5">Рефакторинг краулера</h2>
+          {/* Lead card header */}
+          <div className="flex items-start justify-between mb-5">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-[10px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full">
+                  Новый
+                </span>
+                <span className="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-0.5 rounded-full">Новостройка</span>
+              </div>
+              <h2 className="text-white text-xl font-semibold">Алексей М., 34 года</h2>
+              <p className="text-zinc-500 text-xs mt-1">Добавлен сегодня в 10:42 · L-2841</p>
+            </div>
+            <div className="text-right">
+              <p className="text-zinc-500 text-xs mb-1">Стоимость лида</p>
+              <p className="text-white font-semibold text-lg">2 900 ₽</p>
+            </div>
+          </div>
 
-          {/* Code block */}
-          <div className="bg-zinc-900/80 rounded-lg p-4 text-[11px] font-mono mb-5 border border-zinc-800/50">
-            <div className="space-y-2">
-              <div>
-                <span className="text-zinc-500">Комментарий.</span>
-                <span className="text-amber-300">documentContent</span>
-                <span className="text-zinc-400"> определен неверно. Должен быть </span>
-                <span className="text-cyan-300">LazyManyToOne</span>
-                <span className="text-zinc-400"> связью.</span>
-              </div>
-              <div className="mt-3 text-zinc-600">
-                {/* The document content that this comment is associated with. */}
-              </div>
-              <div>
-                <span className="text-purple-400">@ManyToOne</span>
-                <span className="text-zinc-400">(</span>
-                <span className="text-cyan-300">DocumentContent</span>
-                <span className="text-zinc-400">,</span>
-                <span className="text-amber-300">comments</span>
-                <span className="text-zinc-400">,</span>
-                <span className="text-amber-300">cascade</span>
-                <span className="text-zinc-400">:</span>
-                <span className="text-orange-300">true</span>
-                <span className="text-zinc-400">,</span>
-                <span className="text-amber-300">nullable</span>
-                <span className="text-zinc-400">:</span>
-                <span className="text-orange-300">false</span>
-                <span className="text-zinc-400">)</span>
-              </div>
-              <div>
-                <span className="text-blue-400">public </span>
-                <span className="text-amber-300">documentContent</span>
-                <span className="text-zinc-400">?: </span>
-                <span className="text-cyan-300">DocumentContent</span>
-                <span className="text-zinc-400">;</span>
-              </div>
-              <div className="mt-3 text-zinc-400">
-                Тогда мы будем обращаться к
-                <span className="text-emerald-400">CachedPromise&lt;DocumentContent&gt;</span>
-                , и контент документа будет гидратирован.
+          {/* Lead parameters */}
+          <div className="bg-zinc-900/80 rounded-lg p-4 mb-4 border border-zinc-800/50 space-y-3">
+            <h4 className="text-zinc-300 text-sm font-medium mb-3">Параметры клиента</h4>
+            <LeadParam label="Регион" value="Москва, Новая Москва" />
+            <LeadParam label="Бюджет" value="8 500 000 — 9 500 000 ₽" highlight />
+            <LeadParam label="Тип сделки" value="Новостройка" />
+            <LeadParam label="Комнатность" value="2-комнатная" />
+            <LeadParam label="Способ оплаты" value="Ипотека (Сбербанк)" />
+            <LeadParam label="Застройщики" value="ПИК, Самолёт, А101" />
+            <LeadParam label="Срок покупки" value="1–2 месяца" />
+          </div>
+
+          {/* Audio preview */}
+          <div className="bg-zinc-900/60 rounded-lg p-4 mb-4 border border-zinc-800/50">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-zinc-400 text-xs font-medium">Предварительный звонок</span>
+              <span className="text-zinc-600 text-[10px]">1:24</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <button className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center shrink-0">
+                <span className="text-white text-[10px] ml-0.5">▶</span>
+              </button>
+              <div className="flex-1 h-1 bg-zinc-800 rounded-full overflow-hidden">
+                <div className="w-1/3 h-full bg-indigo-500 rounded-full" />
               </div>
             </div>
           </div>
 
-          {/* Meta actions */}
-          <div className="space-y-2 text-sm mb-5">
-            <div className="flex items-center gap-2 text-zinc-500 hover:text-zinc-300 cursor-pointer transition-colors">
-              <Plus className="w-4 h-4" />
-              <span>Добавить подзадачи</span>
-            </div>
-            <div className="flex items-center gap-2 text-zinc-500 hover:text-zinc-300 cursor-pointer transition-colors">
-              <Link2 className="w-4 h-4" />
-              <span>Ссылки</span>
-            </div>
+          {/* Action buttons */}
+          <div className="flex gap-2">
+            <button className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+              Купить лид — 2 900 ₽
+            </button>
+            <button className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-sm rounded-lg transition-colors border border-zinc-700">
+              <Phone className="w-4 h-4" />
+            </button>
           </div>
+        </div>
 
-          {/* PR reference */}
-          <div className="text-xs text-zinc-500 mb-5">
-            <span className="text-zinc-600">#20319</span>
-            <span> igor/eng-135 add source to insights slice and segment</span>
+        {/* Bottom meta */}
+        <div className="border-t border-zinc-800/50 px-5 py-3 flex items-center gap-4 shrink-0">
+          <div className="flex items-center gap-1.5">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span className="text-xs text-zinc-500">Обновляется в реальном времени</span>
           </div>
-
-          {/* Activity */}
-          <div className="pt-4 border-t border-zinc-800/50">
-            <div className="text-xs text-zinc-500 font-medium mb-3 uppercase tracking-wider">Активность</div>
-            <div className="space-y-3">
-              <ActivityItem
-                avatar="https://i.pravatar.cc/24?img=1"
-                name="nan"
-                action="переместил из"
-                from="Бэклог"
-                to="В работе"
-                time="5 месяцев назад"
-              />
-              <ActivityItem
-                avatar="https://i.pravatar.cc/24?img=2"
-                name="alex"
-                action="прокомментировал"
-                from="эту задачу"
-                time="5 месяцев назад"
-              />
-            </div>
-          </div>
+          <span className="text-xs text-zinc-600">·</span>
+          <span className="text-xs text-zinc-500">+12 лидов сегодня</span>
         </div>
       </motion.div>
     </motion.div>
@@ -334,14 +299,14 @@ function NavItem({
 }) {
   return (
     <div
-      className={`flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer transition-colors ${
-        active ? "bg-zinc-800 text-white" : "text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300"
+      className={`flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer text-xs transition-colors ${
+        active ? "bg-zinc-800 text-white" : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50"
       }`}
     >
-      <Icon className={`w-4 h-4 ${color || ""}`} />
-      <span className="flex-1 text-xs">{label}</span>
+      <Icon className={`w-3.5 h-3.5 shrink-0 ${color || ""}`} />
+      <span className="flex-1 truncate">{label}</span>
       {badge && (
-        <span className="bg-indigo-500/80 text-white text-[10px] min-w-[18px] h-[18px] flex items-center justify-center rounded-full font-medium px-1">
+        <span className="text-[10px] bg-indigo-600/80 text-white px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
           {badge}
         </span>
       )}
@@ -350,87 +315,55 @@ function NavItem({
   )
 }
 
-function InboxItem({
+function LeadItem({
   id,
-  title,
-  subtitle,
-  time,
-  avatar,
-  status,
-  isProject,
+  name,
+  region,
+  budget,
+  type,
+  rooms,
+  price,
+  isNew,
+  isExclusive,
   active,
 }: {
-  id?: string
-  title: string
-  subtitle?: string
-  time?: string
-  avatar: string
-  status: string
-  isProject?: boolean
+  id: string
+  name: string
+  region: string
+  budget: string
+  type: string
+  rooms: string
+  price: string
+  isNew?: boolean
+  isExclusive?: boolean
   active?: boolean
 }) {
-  const statusColors: Record<string, string> = {
-    "in-progress": "bg-yellow-500",
-    todo: "bg-zinc-600",
-    bug: "bg-red-500",
-    done: "bg-emerald-500",
-  }
-
   return (
     <div
       className={`px-4 py-3 border-b border-zinc-800/30 cursor-pointer transition-colors ${
-        active ? "bg-zinc-800/50" : "hover:bg-zinc-800/30"
+        active ? "bg-zinc-800/60" : "hover:bg-zinc-800/30"
       }`}
     >
-      <div className="flex items-start gap-3">
-        <img src={avatar || "/placeholder.svg"} alt="" className="w-8 h-8 rounded-full shrink-0 mt-0.5" />
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-0.5">
-            {id && <span className="text-zinc-500 text-[10px]">{id}</span>}
-            {isProject && <span className="text-violet-400 text-[10px]">Проект</span>}
-            <div className={`w-2 h-2 rounded-full ${statusColors[status] || "bg-zinc-500"}`} />
-          </div>
-          <p className="text-white text-xs truncate leading-tight">{title}</p>
-          {subtitle && <p className="text-zinc-500 text-[10px] mt-0.5 truncate">{subtitle}</p>}
+      <div className="flex items-start justify-between mb-1">
+        <div className="flex items-center gap-1.5">
+          <span className="text-zinc-500 text-[10px]">{id}</span>
+          {isNew && <span className="text-[9px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded-full">Новый</span>}
+          {isExclusive && <span className="text-[9px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded-full">Эксклюзив</span>}
         </div>
-        {time && <span className="text-zinc-600 text-[10px] shrink-0">{time}</span>}
+        <span className="text-zinc-300 text-xs font-medium">{price}</span>
       </div>
+      <p className="text-zinc-200 text-sm font-medium truncate">{name}</p>
+      <p className="text-zinc-500 text-[11px] truncate">{region} · {rooms} · {type}</p>
+      <p className="text-zinc-600 text-[10px] mt-0.5">{budget}</p>
     </div>
   )
 }
 
-function ActivityItem({
-  avatar,
-  name,
-  action,
-  from,
-  to,
-  time,
-}: {
-  avatar: string
-  name: string
-  action: string
-  from: string
-  to?: string
-  time: string
-}) {
+function LeadParam({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
   return (
-    <div className="flex items-start gap-2">
-      <img src={avatar || "/placeholder.svg"} alt="" className="w-5 h-5 rounded-full" />
-      <div className="flex-1">
-        <p className="text-zinc-400 text-xs">
-          <span className="text-white">{name}</span>
-          <span className="text-zinc-500"> {action} </span>
-          <span className="text-zinc-300">{from}</span>
-          {to && (
-            <>
-              <span className="text-zinc-500"> в </span>
-              <span className="text-zinc-300">{to}</span>
-            </>
-          )}
-        </p>
-        <p className="text-zinc-600 text-[10px] mt-0.5">{time}</p>
-      </div>
+    <div className="flex items-center justify-between">
+      <span className="text-zinc-500 text-xs">{label}</span>
+      <span className={`text-xs font-medium ${highlight ? "text-indigo-300" : "text-zinc-300"}`}>{value}</span>
     </div>
   )
 }

@@ -2,12 +2,12 @@ import { motion } from "framer-motion"
 import { ChevronRight, Check, Paperclip, Globe, Lightbulb } from "lucide-react"
 
 const agents = [
-  { name: "Cursor", isAgent: true, selected: true, icon: "◇" },
-  { name: "GitHub Copilot", isAgent: true, selected: false, icon: "◉" },
-  { name: "Sentry", isAgent: true, selected: false, icon: "◈" },
-  { name: "Leela", isAgent: false, selected: false, icon: "○" },
-  { name: "Codex", isAgent: true, selected: false, icon: "◎" },
-  { name: "Conor", isAgent: false, selected: false, icon: "○" },
+  { name: "Москва и МО", isAgent: true, selected: true, icon: "◇" },
+  { name: "Санкт-Петербург", isAgent: true, selected: false, icon: "◉" },
+  { name: "Краснодар", isAgent: true, selected: false, icon: "◈" },
+  { name: "Екатеринбург", isAgent: false, selected: false, icon: "○" },
+  { name: "Новосибирск", isAgent: true, selected: false, icon: "◎" },
+  { name: "Казань", isAgent: false, selected: false, icon: "○" },
 ]
 
 export function AISection() {
@@ -30,8 +30,8 @@ export function AISection() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-2 mb-6"
           >
-            <div className="w-2 h-2 rounded-full bg-blue-500" />
-            <span className="text-zinc-400 text-sm">Искусственный интеллект</span>
+            <div className="w-2 h-2 rounded-full bg-indigo-500" />
+            <span className="text-zinc-400 text-sm">Перехват аудитории</span>
             <ChevronRight className="w-4 h-4 text-zinc-500" />
           </motion.div>
 
@@ -49,7 +49,7 @@ export function AISection() {
               lineHeight: 1.1,
             }}
           >
-            Разработка с ИИ-помощником
+            Перехватывайте клиентов застройщиков в вашем регионе
           </motion.h2>
 
           {/* Description */}
@@ -60,8 +60,7 @@ export function AISection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zinc-400 max-w-md mb-8"
           >
-            <span className="text-white font-medium">Orbit для агентов.</span> Выбирайте из множества ИИ-агентов и
-            делегируйте задачи: от генерации кода до других технических задач.
+            <span className="text-white font-medium">Перехват — ваш новый канал лидов.</span> Выбирайте регион и пул застройщиков — мы соберём аудиторию, которая уже интересовалась новостройками, и передадим контакты в ваш кабинет.
           </motion.p>
 
           {/* Learn more button */}
@@ -135,7 +134,7 @@ export function AISection() {
 
                 {/* Input field */}
                 <div className="bg-zinc-800/50 border border-zinc-700 rounded-t-xl px-5 py-4">
-                  <span className="text-zinc-500 italic">Назначить...</span>
+                  <span className="text-zinc-500 italic">Выберите регион перехвата...</span>
                 </div>
 
                 {/* Dropdown options */}
@@ -177,7 +176,7 @@ export function AISection() {
                             {agent.name}
                           </span>
                           {agent.isAgent && (
-                            <span className="text-xs bg-zinc-700 text-zinc-400 px-2 py-0.5 rounded">Агент</span>
+                            <span className="text-xs bg-indigo-900/50 text-indigo-400 px-2 py-0.5 rounded">Активен</span>
                           )}
                         </div>
                         {agent.selected && <Check className="w-4 h-4 text-zinc-400" />}
@@ -200,81 +199,59 @@ export function AISection() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Left column */}
               <div className="border-t border-r border-b border-zinc-800/60 pt-12 pr-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Автопилот для продукта</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Умные фильтры лидов</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Оптимизируйте рабочие процессы с ИИ-ассистентом для рутинных и ручных задач.
+                  Настройте параметры один раз — получайте только тех клиентов, которые подходят вашему агентству.
                 </p>
 
                 {/* Triage Intelligence Card */}
                 <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-5">
                   <div className="flex items-center gap-2 mb-5">
-                    <svg className="w-4 h-4 text-zinc-500" viewBox="0 0 16 16" fill="currentColor">
+                    <svg className="w-4 h-4 text-indigo-400" viewBox="0 0 16 16" fill="currentColor">
                       <path d="M8 0L9.5 5.5L15 7L9.5 8.5L8 14L6.5 8.5L1 7L6.5 5.5L8 0Z" />
                     </svg>
                     <span className="text-zinc-500 text-sm">
-                      Умная <span className="text-zinc-300">сортировка</span>
+                      Активные <span className="text-zinc-300">фильтры</span>
                     </span>
                   </div>
 
-                  {/* Suggestions Row */}
+                  {/* Filter rows */}
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-zinc-600 text-sm w-20">Рекомендации</span>
+                    <span className="text-zinc-600 text-sm w-24">Регион</span>
                     <div className="flex items-center gap-2">
-                      <span
-                        className="flex items-center gap-1.5 rounded-md px-2 py-1 text-sm"
-                        style={{ background: "#7170ff" }}
-                      >
-                        <span className="w-4 h-4 bg-white/30 rounded-full" />
-                        <span className="text-white">nan</span>
-                      </span>
-                      <span className="flex items-center gap-1.5 bg-zinc-800/30 rounded-md px-2 py-1 text-sm text-zinc-600">
-                        <span className="w-3 h-3 border border-zinc-700 rounded" />
-                        Рефакторинг приложения
-                      </span>
-                      <span className="flex items-center gap-1.5 text-sm text-zinc-700">
-                        <span className="w-2 h-2 bg-zinc-600 rounded-full" />
-                        Slack
+                      <span className="flex items-center gap-1.5 rounded-md px-2 py-1 text-sm" style={{ background: "#4f46e5" }}>
+                        <span className="text-white">Москва и МО</span>
                       </span>
                     </div>
                   </div>
 
-                  {/* Duplicate Row */}
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-zinc-600 text-sm w-20">Дубликат</span>
+                    <span className="text-zinc-600 text-sm w-24">Бюджет</span>
+                    <span className="flex items-center gap-1.5 bg-zinc-800/30 rounded-md px-2 py-1 text-sm text-zinc-400">
+                      от 5 до 20 млн ₽
+                    </span>
                   </div>
 
-                  {/* Related Row */}
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-zinc-600 text-sm w-20">Связано с</span>
+                    <span className="text-zinc-600 text-sm w-24">Тип</span>
+                    <span className="flex items-center gap-1.5 bg-zinc-800/30 rounded-md px-2 py-1 text-sm text-zinc-400">
+                      Новостройка
+                    </span>
+                    <span className="flex items-center gap-1.5 bg-zinc-800/30 rounded-md px-2 py-1 text-sm text-zinc-400">
+                      Ипотека
+                    </span>
                   </div>
 
-                  {/* Expanded Suggestion Card */}
+                  {/* Result preview */}
                   <div className="bg-zinc-800/40 rounded-lg p-4 ml-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="w-5 h-5 bg-zinc-600 rounded-full" />
-                      <span className="text-zinc-300 text-sm font-medium">nan</span>
-                    </div>
-
-                    <p className="text-zinc-500 text-xs mb-2">Почему этот исполнитель</p>
+                    <p className="text-zinc-500 text-xs mb-2">Доступно лидов по фильтру</p>
+                    <p className="text-white text-2xl font-semibold mb-3">247</p>
                     <p className="text-zinc-500 text-sm mb-4">
-                      Этот человек работал над похожими задачами, связанными с производительностью мобильного приложения
+                      Средняя стоимость лида в этом сегменте — <span className="text-zinc-300">2 800 ₽</span>
                     </p>
-
-                    <p className="text-zinc-500 text-xs mb-2">Альтернативы</p>
-                    <div className="flex items-center gap-2 mb-4">
-                      <span className="flex items-center gap-1.5 bg-zinc-700/50 rounded-md px-2 py-1 text-sm">
-                        <span className="w-4 h-4 bg-zinc-500 rounded-full" />
-                        <span className="text-zinc-400">yann</span>
-                      </span>
-                      <span className="flex items-center gap-1.5 bg-zinc-700/50 rounded-md px-2 py-1 text-sm">
-                        <span className="w-4 h-4 bg-zinc-500 rounded-full" />
-                        <span className="text-zinc-400">erin</span>
-                      </span>
-                    </div>
-
-                    <button className="w-full flex items-center justify-center gap-2 bg-zinc-700/50 hover:bg-zinc-600/50 text-zinc-300 text-sm py-2.5 rounded-md transition-colors">
+                    <button className="w-full flex items-center justify-center gap-2 bg-indigo-600/80 hover:bg-indigo-600 text-white text-sm py-2.5 rounded-md transition-colors">
                       <Check className="w-4 h-4" />
-                      Принять
+                      Применить фильтр
                     </button>
                   </div>
                 </div>
@@ -282,49 +259,49 @@ export function AISection() {
 
               {/* Right column */}
               <div className="border-t border-b border-zinc-800/60 pt-12 pl-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Orbit MCP</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Баланс и пополнение</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Подключите Orbit к любимым инструментам: Cursor, Claude, ChatGPT и другим.
+                  Пополняйте баланс и покупайте лиды мгновенно — без менеджеров и задержек.
                 </p>
 
-                {/* MCP Code Snippet */}
-                <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-5 font-mono text-sm">
-                  <p className="text-zinc-700 mb-3">//mcp.orbit.app/sse</p>
-                  <div className="space-y-1 mb-6">
-                    <p>
-                      <span className="text-orange-400/70">"mcpServers"</span>
-                      <span className="text-zinc-500">: {"{"}</span>
-                    </p>
-                    <p className="pl-4">
-                      <span className="text-orange-400/70">"orbit"</span>
-                      <span className="text-zinc-500">: {"{"}</span>
-                    </p>
-                    <p className="pl-8">
-                      <span className="text-orange-400/70">"command"</span>
-                      <span className="text-zinc-500">: </span>
-                      <span className="text-green-400/70">"npx"</span>
-                    </p>
+                {/* Balance Card */}
+                <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-5 text-sm">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-zinc-500">Текущий баланс</span>
+                    <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full">Активен</span>
+                  </div>
+                  <p className="text-white text-3xl font-semibold mb-1">24 800 ₽</p>
+                  <p className="text-zinc-600 text-xs mb-6">Достаточно для ~8 лидов</p>
+
+                  <div className="space-y-2 mb-6">
+                    {[
+                      { label: "Куплено лидов", value: "43 шт.", color: "text-indigo-400" },
+                      { label: "Израсходовано", value: "123 200 ₽", color: "text-zinc-300" },
+                      { label: "Конверсия", value: "18%", color: "text-emerald-400" },
+                    ].map((row) => (
+                      <div key={row.label} className="flex items-center justify-between">
+                        <span className="text-zinc-600">{row.label}</span>
+                        <span className={`font-medium ${row.color}`}>{row.value}</span>
+                      </div>
+                    ))}
                   </div>
 
-                  {/* Ask Anything Input */}
                   <div className="bg-zinc-800/40 rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-4">
-                      <span className="w-0.5 h-5 bg-zinc-600" />
-                      <span className="text-zinc-600">Спросите что угодно</span>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-zinc-500 text-xs">Быстрое пополнение</span>
                     </div>
-
                     <div className="flex items-center gap-2">
-                      <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
+                      <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-400 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Paperclip className="w-3.5 h-3.5" />
-                        Файл
+                        5 000 ₽
                       </button>
-                      <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
+                      <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-400 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Globe className="w-3.5 h-3.5" />
-                        Поиск
+                        15 000 ₽
                       </button>
-                      <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
+                      <button className="flex items-center gap-1.5 border border-indigo-700/60 text-indigo-400 text-sm px-3 py-1.5 rounded-full hover:bg-indigo-700/30 transition-colors">
                         <Lightbulb className="w-3.5 h-3.5" />
-                        Анализ
+                        50 000 ₽
                       </button>
                     </div>
                   </div>
